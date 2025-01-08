@@ -447,10 +447,7 @@ class _HomePageState extends State<HomePage> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     spacing: 8,
                     children: [
-                      ImageIcon(
-                        AssetImage('assets/images/arrow-left-square.png'),
-                        color: Colors.white,
-                      ),
+                      Image.asset('assets/images/arrow-left-square.png'),
                       Text(
                         'Back to BTN Smart',
                         style: TextStyle(color: Colors.white, fontSize: 16),
