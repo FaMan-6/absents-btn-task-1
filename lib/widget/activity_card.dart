@@ -105,7 +105,6 @@ class _ActivityCardState extends State<ActivityCard> {
                   child: Container(
                     margin: EdgeInsets.only(top: 6),
                     alignment: Alignment.center,
-                    width: 310,
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [

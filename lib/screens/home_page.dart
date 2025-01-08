@@ -47,45 +47,49 @@ class _HomePageState extends State<HomePage> {
                                 mainAxisAlignment:
                                     MainAxisAlignment.spaceBetween,
                                 children: [
-                                  Image(
-                                    image:
-                                        AssetImage('assets/images/Avatar.png'),
-                                    height: 48,
-                                    width: 48,
-                                  ),
-                                  Container(
-                                    margin: EdgeInsets.only(left: 10),
-                                    alignment: Alignment.centerLeft,
-                                    height: 65,
-                                    width: 221,
-                                    child: Column(
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.start,
-                                      children: [
-                                        Text(
-                                          'Ari Pamungkas',
-                                          style: TextStyle(
-                                            fontSize: 24,
-                                            fontFamily: 'Poppins',
-                                            color: Colors.white,
-                                          ),
-                                          textAlign: TextAlign.start,
-                                        ),
-                                        Padding(
-                                          padding:
-                                              const EdgeInsets.only(top: 5.0),
-                                          child: Text(
-                                            'Product Manager',
-                                            style: TextStyle(
-                                              fontSize: 16,
-                                              fontFamily: 'Poppins',
-                                              color: Colors.white,
+                                  Row(
+                                    children: [
+                                      Image(
+                                        image: AssetImage(
+                                            'assets/images/Avatar.png'),
+                                        height: 48,
+                                        width: 48,
+                                      ),
+                                      Container(
+                                        margin: EdgeInsets.only(left: 10),
+                                        alignment: Alignment.centerLeft,
+                                        height: 65,
+                                        width: 221,
+                                        child: Column(
+                                          crossAxisAlignment:
+                                              CrossAxisAlignment.start,
+                                          children: [
+                                            Text(
+                                              'Ari Pamungkas',
+                                              style: TextStyle(
+                                                fontSize: 24,
+                                                fontFamily: 'Poppins',
+                                                color: Colors.white,
+                                              ),
+                                              textAlign: TextAlign.start,
                                             ),
-                                            textAlign: TextAlign.start,
-                                          ),
-                                        )
-                                      ],
-                                    ),
+                                            Padding(
+                                              padding: const EdgeInsets.only(
+                                                  top: 5.0),
+                                              child: Text(
+                                                'Product Manager',
+                                                style: TextStyle(
+                                                  fontSize: 16,
+                                                  fontFamily: 'Poppins',
+                                                  color: Colors.white,
+                                                ),
+                                                textAlign: TextAlign.start,
+                                              ),
+                                            )
+                                          ],
+                                        ),
+                                      ),
+                                    ],
                                   ),
                                   GestureDetector(
                                     onTap: () {},
@@ -252,29 +256,26 @@ class _HomePageState extends State<HomePage> {
                         horizontal: 16.0,
                         vertical: 6.0,
                       ),
-                      child: Column(
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          Row(
+                          Column(
                             children: [
                               Menu(
                                 background: 'assets/images/Client Visit.png',
                                 title: 'Client Visit',
                               ),
                               Menu(
-                                background: 'assets/images/Time Off.png',
-                                title: 'Time Off',
-                              ),
-                              Menu(
-                                background: 'assets/images/Log Absent.png',
-                                title: 'Log Absent',
+                                background: 'assets/images/Calendar.png',
+                                title: 'Calendar',
                               ),
                             ],
                           ),
-                          Row(
+                          Column(
                             children: [
                               Menu(
-                                background: 'assets/images/Calendar.png',
-                                title: 'Calendar',
+                                background: 'assets/images/Time Off.png',
+                                title: 'Time Off',
                               ),
                               Menu(
                                 background: 'assets/images/Activity.png',
@@ -282,98 +283,102 @@ class _HomePageState extends State<HomePage> {
                               ),
                             ],
                           ),
+                          Column(
+                            children: [
+                              Menu(
+                                background: 'assets/images/Log Absent.png',
+                                title: 'Log Absent',
+                              ),
+                            ],
+                          )
                         ],
                       ),
                     ),
                   ),
-                  Container(
-                    margin: EdgeInsets.symmetric(horizontal: 16, vertical: 6),
-                    width: 340,
-                    height: 90,
-                    decoration: BoxDecoration(
-                      color: Colors.white,
-                      boxShadow: [
-                        BoxShadow(
-                          color: Colors.black45,
-                          blurRadius: 6,
-                          spreadRadius: -1,
-                          offset: Offset(0, 4),
-                        ),
-                      ],
-                      borderRadius: BorderRadius.circular(12),
-                    ),
-                    child: Padding(
-                      padding: const EdgeInsets.symmetric(
-                          horizontal: 15.0, vertical: 17.0),
-                      child: Row(
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Column(
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Text(
-                                'Client Visit',
-                                style: TextStyle(
-                                  fontSize: 14,
-                                  fontFamily: 'Poppins',
-                                  color: Colors.blue[800],
-                                ),
-                              ),
-                              Text(
-                                '00:00:00',
-                                style: TextStyle(
-                                  fontSize: 18,
-                                  fontFamily: 'Poppins',
-                                  color: Colors.black,
-                                ),
-                              ),
-                            ],
+                  Padding(
+                    padding: const EdgeInsets.symmetric(
+                        horizontal: 16.0, vertical: 6.0),
+                    child: Container(
+                      width: double.infinity,
+                      height: 90,
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        boxShadow: [
+                          BoxShadow(
+                            color: Colors.black45,
+                            blurRadius: 6,
+                            spreadRadius: -1,
+                            offset: Offset(0, 4),
                           ),
-                          GestureDetector(
-                            onTap: () {},
-                            child: Container(
-                              decoration: BoxDecoration(
-                                  color: Colors.blue[900],
-                                  borderRadius: BorderRadius.circular(28)),
-                              child: Padding(
-                                padding: const EdgeInsets.symmetric(
-                                    horizontal: 24.0, vertical: 16.0),
-                                child: Row(
-                                  children: [
-                                    Text(
-                                      'Visit In',
-                                      style: TextStyle(
-                                        fontSize: 16,
-                                        fontFamily: 'Poppins',
-                                        color: Colors.white,
-                                      ),
-                                    ),
-                                    Padding(
-                                      padding: const EdgeInsets.only(left: 8.0),
-                                      child: Image(
-                                        image: AssetImage(
-                                          'assets/images/Vector send plus.png',
+                        ],
+                        borderRadius: BorderRadius.circular(12),
+                      ),
+                      child: Padding(
+                        padding: const EdgeInsets.symmetric(
+                            horizontal: 15.0, vertical: 17.0),
+                        child: Row(
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Column(
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Text(
+                                  'Client Visit',
+                                  style: TextStyle(
+                                    fontSize: 14,
+                                    fontFamily: 'Poppins',
+                                    color: Colors.blue[800],
+                                  ),
+                                ),
+                                Text(
+                                  '00:00:00',
+                                  style: TextStyle(
+                                    fontSize: 18,
+                                    fontFamily: 'Poppins',
+                                    color: Colors.black,
+                                  ),
+                                ),
+                              ],
+                            ),
+                            GestureDetector(
+                              onTap: () {},
+                              child: Container(
+                                decoration: BoxDecoration(
+                                    color: Colors.blue[900],
+                                    borderRadius: BorderRadius.circular(28)),
+                                child: Padding(
+                                  padding: const EdgeInsets.symmetric(
+                                      horizontal: 24.0, vertical: 16.0),
+                                  child: Row(
+                                    children: [
+                                      Text(
+                                        'Visit In',
+                                        style: TextStyle(
+                                          fontSize: 16,
+                                          fontFamily: 'Poppins',
+                                          color: Colors.white,
                                         ),
-                                        height: 20,
-                                        width: 20,
                                       ),
-                                    ),
-                                    // Padding(
-                                    //   padding: const EdgeInsets.only(left: 8.0),
-                                    //   child: Icon(
-                                    //     Icons.send,
-                                    //     color: Colors.white,
-                                    //     size: 20,
-                                    //   ),
-                                    // ),
-                                  ],
+                                      Padding(
+                                        padding:
+                                            const EdgeInsets.only(left: 8.0),
+                                        child: Image(
+                                          image: AssetImage(
+                                            'assets/images/Vector send plus.png',
+                                          ),
+                                          height: 20,
+                                          width: 20,
+                                        ),
+                                      ),
+                                    ],
+                                  ),
                                 ),
                               ),
                             ),
-                          ),
-                        ],
+                          ],
+                        ),
                       ),
                     ),
                   ),
@@ -442,9 +447,9 @@ class _HomePageState extends State<HomePage> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     spacing: 8,
                     children: [
-                      Image(
-                        image:
-                            AssetImage('assets/images/arrow-left-square.png'),
+                      ImageIcon(
+                        AssetImage('assets/images/arrow-left-square.png'),
+                        color: Colors.white,
                       ),
                       Text(
                         'Back to BTN Smart',
