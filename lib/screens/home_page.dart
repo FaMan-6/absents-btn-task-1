@@ -431,17 +431,11 @@ class _HomePageState extends State<HomePage> {
                 const EdgeInsets.symmetric(horizontal: 16.0, vertical: 19.5),
             child: Container(
               width: double.infinity,
-              decoration: BoxDecoration(color: Colors.white, boxShadow: [
-                BoxShadow(
-                  color: Colors.black45,
-                  blurRadius: 6,
-                  spreadRadius: -1,
-                  offset: Offset(0, -4),
-                ),
-              ]),
+              decoration: BoxDecoration(color: Colors.white),
               child: Container(
                 decoration: BoxDecoration(
-                    color: Colors.blue[900], boxShadow: [BoxShadow()]),
+                    color: Colors.blue[900],
+                    borderRadius: BorderRadius.circular(6)),
                 child: Padding(
                   padding: const EdgeInsets.symmetric(vertical: 10.0),
                   child: Row(
