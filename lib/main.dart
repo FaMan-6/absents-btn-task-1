@@ -18,6 +18,7 @@ class MyApp extends StatelessWidget {
       providers: [
         BlocProvider(create: (_) => UserCubit()),
         BlocProvider(create: (_) => VoaRealisasiCubit()),
+        BlocProvider(create: (_) => BaselineCubit()),
       ],
       child: MaterialApp(
         theme: ThemeData(

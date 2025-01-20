@@ -4,11 +4,11 @@ import 'package:absents_btn/models/voa_realisasi.dart';
 
 List<Baseline> baselineData = [
   Baseline(
-    nominal: 1000000,
-    growthRealisasi: 10,
-    growthTarget: 20,
-    posisiRealisasi: 30,
-    posisiTarget: 40,
+    nominal: 7200000000,
+    growthRealisasi: 3500000000,
+    growthTarget: 5000000000,
+    posisiRealisasi: 6100000000,
+    posisiTarget: 12200000000,
   ),
 ];
 
